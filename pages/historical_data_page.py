@@ -11,7 +11,7 @@ st.title('Mentaal gezondheidsrisico voorspelling dashboard')
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("mental_health_dataset.csv")
+    df = pd.read_csv("mental_health_dataset_clean.csv")
     df["productivity_score"] = pd.to_numeric(df["productivity_score"], errors="coerce")
     return df
 

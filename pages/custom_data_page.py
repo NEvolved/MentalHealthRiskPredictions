@@ -29,7 +29,7 @@ if uploaded_data is not None:
             result_df = input_data.copy()
             result_df["predicted_mental_health_risk"] = predictions
 
-            st.success("Predictions completed successfully!")
+            st.success("Voorspellingen succesvol gegenereerd!")
 
             df_columns = result_df.columns.tolist()
             df_columns = df_columns[-1:] + df_columns[:-1]
@@ -39,7 +39,7 @@ if uploaded_data is not None:
 
             csv_data = result_df.to_csv(index=False).encode('utf-8')
             st.download_button(
-                label="Download Predictions as CSV",
+                label="Download voorspellingen als CSV",
                 data=csv_data,
                 file_name="mental_health_predictions.csv",
                 mime="text/csv",
